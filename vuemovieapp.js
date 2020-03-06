@@ -14,10 +14,11 @@ Vue.component('movie-detail',{
 	<h5 class="card-title">TYPE: {{movie.Type}} </h5>
 	<h5 class="card-title">IMAGE_LINK: {{movie.Poster}} </h5>
 
-    <a href="" class="btn btn-primary"  > CLICK TO CLOSE THE DETAILS.</a>
+	<a href="" class="btn btn-primary"  > CLICK TO CLOSE THE DETAILS.</a>
   </div>
 </div></div>
-    `
+
+   `
 
 });
 	
@@ -43,8 +44,12 @@ new Vue({
 
             })
             
-        }
+		}
+		
 		
 	}	
 
 })
+
+
+ 
