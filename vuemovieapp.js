@@ -13,21 +13,19 @@ Vue.component('movie-detail',{
 	<h5 class="card-title">IMDB_ID: {{movie.imdbID}} </h5>
 	<h5 class="card-title">TYPE: {{movie.Type}} </h5>
 	<h5 class="card-title">IMAGE_LINK: {{movie.Poster}} </h5>
-
-	<a href="" class="btn btn-primary"  > CLICK TO CLOSE THE DETAILS.</a>
+    <a href="" class="btn btn-primary"  > CLICK TO CLOSE THE DETAILS.</a>
   </div>
 </div></div>
-
-   `
+    `
 
 });
-	
+
 
 new Vue({
 	el:"#movieapp",
 
 	data:{
-		searchKey:'',
+	
 		moviesList:[]
 
 	},
@@ -35,7 +33,7 @@ new Vue({
 
 		searchMovies()
 		{
-            
+
             var url='http://www.omdbapi.com/?s=harry potter&apikey=e0620bd4';
             fetch(url)
 			.then(response=>response.json())
@@ -43,13 +41,9 @@ new Vue({
 			this.moviesList=data;
 
             })
-            
-		}
-		
-		
+
+        }
+
 	}	
 
 })
-
-
- 

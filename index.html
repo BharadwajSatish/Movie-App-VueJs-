@@ -5,97 +5,35 @@
 	 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	  	<title>OMDB API DATA</title>
 		  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		 <script language="JavaScript">
-
-			window.addEventListener('load', function() {
-		  document.querySelector('input[type="file"]').addEventListener('change', 
-		
-		function() {
-			if (this.files && this.files[0]) {
-			  var img = document.querySelector('img'); 
-			  img.src = URL.createObjectURL(this.files[0]); 
-			}
-		  });
-		});
-			function showInput() {
-				document.getElementById('displayTitle').innerHTML = 
-							document.getElementById("title").value;
-			document.getElementById('displayYear').innerHTML = 
-							document.getElementById("year").value;
-			document.getElementById('displayId').innerHTML = 
-							document.getElementById("id").value;
-			document.getElementById('displayType').innerHTML = 
-							document.getElementById("type").value;
-			document.getElementById('displayImage').innerHTML = 
-							document.getElementById("image").value;
-		
-		alert(" GO TO THE BOTTOM OF WEBPAGE,Movie has been added to the list!!!");
-			}
-		  </script>
-		  
-		  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
-  
+
 <body style="background-color:powderblue;">
   	<div id="movieapp">
 
+
   	<button class="btn btn-primary" v-on:click="searchMovies">Click to show
 		   harry potter movie details.</button>
-		   <div id="result">
-	  <h2>Results</h2></br><br>
-		   </div>
-	  
+	  <h2>Results</h2></br>
+
   	<ul>
   		<li v-for="item in moviesList.Search">
   			<movie-detail v-bind:movie="item"></movie-detail>
-  			
+
   		</li>
   	</ul>
 </div>
 
-<form>
 
-	<center>
-		<label><b>TITLE: </b></label>
-		<input type="text" name="message" id="title"><br/>
-	
-	<label><b>YEAR: </b></label>
-		<input type="text" name="message" id="year"><br/>
-	
-	<label><b>IMDB_ID: </b></label>
-		<input type="text" name="message" id="id"><br/>
-	
-	<label><b>TYPE: </b></label>
-		<input type="text" name="message" id="type"><br/>
-	
-	
-	<label><b>IMAGE_LINK: </b></label>
-		<input type="text" name="message" id="image"><br/><br><br>
-	
-	
-	<input type='file' />
-	<br><br></center>
-	
-	<center>
-		
-	  <input type="submit"  onclick="showInput();return false"><br/></center><br><br><br><br><br>
-	  
-	  <div id="header">
-	  <img id="myImg" src="#" alt="your image" width="300" height="300">
-	 
-	  <p><label><b>TITLE:      </b></label><span id='displayTitle'></span></p>
-	  <p><label><b>YEAR:       </b></label><span id='displayYear'></span></p>
-	  <p><label><b>IMDB_ID:    </b></label><span id='displayId'></span></p>
-	  <p><label><b>TYPE:       </b></label><span id='displayType'></span></p>
-	  <p><label><b>IMAGE_LINK: </b></label><span id='displayImage'></span></p>
-	
-	</div>
-	</form>
 
-	
-	<script src="vuemovieapp.js"></script>
+
+  	<script src="vuemovieapp.js"></script>
   	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+
   </body>
-  </html>
+  </html> 
