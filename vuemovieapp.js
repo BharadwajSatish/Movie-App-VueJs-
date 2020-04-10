@@ -21,29 +21,44 @@ Vue.component('movie-detail',{
 });
 
 
-new Vue({
+ new Vue({
 	el:"#movieapp",
+
+
+	beforeCreate()
+	{
+		alert("LIFECYCLE HOOK INIT STAGE.")
+		
+	},
+
+	created()
+	{
+
+		var url='http://www.omdbapi.com/?s=harry potter&apikey=e0620bd4';
+		fetch(url)
+		.then(response=>response.json())
+		.then(data=>{
+		this.moviesList=data;
+
+		})
+		console.log("CREATED THE FUNCTION");
+	
+	},
+	
+		
 
 	data:{
 	
 		moviesList:[]
 
-	},
-	methods:{		
-
-		searchMovies()
-		{
-
-            var url='http://www.omdbapi.com/?s=harry potter&apikey=e0620bd4';
-            fetch(url)
-			.then(response=>response.json())
-			.then(data=>{
-			this.moviesList=data;
-
-            })
-
-        }
-
-	}	
+	}
+			
+	
+		
 
 })
+
+
+
+
+ 
